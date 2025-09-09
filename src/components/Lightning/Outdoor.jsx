@@ -1,5 +1,5 @@
 import React from 'react';
-import { outdoorLighting } from '../data/Data';
+import { outdoorLighting } from '../data/data';
 
 const Outdoor = () => {
   return (

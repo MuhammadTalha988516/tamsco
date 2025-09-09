@@ -1,5 +1,5 @@
 import React from 'react';
-import { indoorLighting } from '../data/Data';
+import { indoorLighting } from '../data/data';
 
 const Indoor = () => {
   return (

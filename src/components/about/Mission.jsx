@@ -1,6 +1,6 @@
 import React from 'react';
 import { LightBulbIcon } from '@heroicons/react/24/solid';
-import { mission } from '../data/Data';
+import { mission } from '../data/data';
 
 const Mission = () => {
   return (

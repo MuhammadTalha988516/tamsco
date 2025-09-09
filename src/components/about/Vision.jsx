@@ -1,6 +1,6 @@
 import React from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid';
-import { vision } from '../data/Data';
+import { vision } from '../data/data';
 
 const Vision = () => {
   return (

@@ -4,6 +4,7 @@ import HomePage from "./components/pages/Homepage";
 import AboutUs from "./components/pages/AboutUs";
 import Lights from "./components/pages/Lights";
 import ContactUs from "./components/pages/ContactUs";
+import GTR from "./components/pages/GTR";
 
 export default function App() {
   return (
@@ -13,6 +14,8 @@ export default function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/lights" element={<Lights />} />
         <Route path="/ContactUs" element={<ContactUs/>} />
+        <Route path="/GeneralTrading" element={<GTR/>} />
+
       </Routes>
     </Router>
   );

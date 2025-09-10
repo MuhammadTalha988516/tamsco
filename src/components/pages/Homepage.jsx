@@ -8,7 +8,7 @@ import AboutUs from "../HomePage/AboutUs";
 import OurPartners from "../HomePage/OurPartners";
 import Policy from "../HomePage/Policy";
 import WhyChooseUs from "../HomePage/WhyChooseUS";
-import ContactUs from "../HomePage/ContactUs";
+import Contact from "../HomePage/Contact";
 
 export default function HomePage() {
   return (
@@ -21,7 +21,7 @@ export default function HomePage() {
       <Policy />
       <OurPartners />
       <WhyChooseUs />
-      <ContactUs />
+      <Contact />
       <Footer />
     </>
   );

@@ -7,7 +7,7 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Lights", path: "/lights" },
     { name: "Construction", path: "/construction" },
-    { name: "General Trading", path: "/trading" },
+    { name: "General Trading", path: "/GeneralTrading" },
     { name: "Contact", path: "/ContactUs" },
   ];
 

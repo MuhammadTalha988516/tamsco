@@ -14,7 +14,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            viewport={{ always: true }}
+            viewport={{ once: true }}
             className="hidden md:block"
           >
             <img
@@ -29,7 +29,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            viewport={{ always
+            viewport={{ once
 : true }}
             className="p-10 flex flex-col justify-center"
           >
@@ -46,7 +46,7 @@ export default function ContactUs() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                viewport={{ always
+                viewport={{ once
 : true }}
               >
                 <label className="block text-sm font-medium text-gray-700">
@@ -63,7 +63,7 @@ export default function ContactUs() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                viewport={{ always
+                viewport={{ once
 : true }}
               >
                 <label className="block text-sm font-medium text-gray-700">
@@ -80,7 +80,7 @@ export default function ContactUs() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                viewport={{ always
+                viewport={{ once
 : true }}
               >
                 <label className="block text-sm font-medium text-gray-700">
@@ -97,7 +97,7 @@ export default function ContactUs() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                viewport={{ always
+                viewport={{ once
 : true }}
               >
                 <label className="block text-sm font-medium text-gray-700">
@@ -114,7 +114,7 @@ export default function ContactUs() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1 }}
-                viewport={{ always
+                viewport={{ once
 : true }}
                 type="button"
                 className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition"

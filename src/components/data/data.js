@@ -211,7 +211,7 @@ export const indoorLighting = [
     {
       id: 'tennis-center',
       title: 'Tennis center',
-      image: 'https://images.unsplash.com/photo-1445384763658-0400939829cd?q=80&w=1600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop',
       tag: 'Courts',
       description:
         'Multi-court complex with lighting, seating, and pro shop.',

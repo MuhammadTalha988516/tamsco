@@ -1,32 +1,40 @@
 import React from "react";
 
-export default function TextMarquee({
-  text = "LIGHTING SPACES | BUILDING DREAMS | POWERING TOMORROW",
+export default function Ticker({
+  text = "Lighting Spaces | Building Dreams | Empowering Tomorrow",
   repeat = 2,
   speed = 20,
   pauseOnHover = false,
   reverse = false,
   gap = "8rem",
 }) {
+  // Split text into separate phrases (by | separator)
+  const phrases = text.split("|").map((t) => t.trim());
+
+  // Create repeated segments
   const segments = Array.from({ length: repeat }, (_, i) => (
-    <span
-      key={i}
-      className="text-white text-3xl font-bold whitespace-nowrap"
-      style={{ marginRight: gap }}
-    >
-      {text}
-    </span>
+    <div key={i} className="flex">
+      {phrases.map((phrase, j) => (
+        <span
+          key={`${i}-${j}`}
+          className="text-white text-3xl font-bold whitespace-nowrap"
+          style={{ marginRight: gap }}
+        >
+          {phrase}
+        </span>
+      ))}
+    </div>
   ));
 
   return (
-    <div className="group flex overflow-hidden bg-gray-900 py-3 w-full mb-10">
+    <div className="group flex overflow-hidden  bg-gray-900 py-3 w-full mb-10">
       <div
         className={`flex shrink-0 animate-marquee ${
           pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""
         } ${reverse ? "[animation-direction:reverse]" : ""}`}
-        style={{ animationDuration: `${speed}s` }}
+        style={{ "--duration": `${speed}s` }}
       >
-        {/* Put two identical strips for seamless effect */}
+        {/* Two identical strips for seamless infinite scrolling */}
         {segments}
         {segments}
       </div>
@@ -34,8 +42,8 @@ export default function TextMarquee({
       <style>
         {`
           @keyframes marquee {
-            0% { transform: translateX(0); }       /* Start exactly at left */
-            100% { transform: translateX(-50%); }  /* Scroll entire first half away */
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
           }
           .animate-marquee {
             display: inline-flex;

@@ -14,9 +14,9 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Banner />
-      <Boxes />
+      <Boxes /> 
       <Ticker />
+      <Banner />
       <AboutUs />
       <Policy />
       <OurPartners />

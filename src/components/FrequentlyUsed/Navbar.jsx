@@ -8,7 +8,7 @@ export default function Navbar() {
     { name: "Lights", path: "/lights" },
     { name: "Construction", path: "/construction" },
     { name: "General Trading", path: "/trading" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/ContactUs" },
   ];
 
   return (

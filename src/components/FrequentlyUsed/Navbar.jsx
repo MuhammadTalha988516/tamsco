@@ -16,7 +16,6 @@ export default function Navbar() {
     <nav className="bg-white text-black w-full fixed top-0 left-0 z-50 shadow-lg">
       <div className="w-full flex justify-between items-center px-20 h-20">
 
-        {/* Logo with glow effect */}
         <div className="relative">
           <Link to="/" className="relative flex items-center">
             <img

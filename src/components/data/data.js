@@ -72,6 +72,150 @@ export const indoorLighting = [
     { title: 'Street Lights', image: '/images/outdoor/street.jpg' },
     { title: 'Solar Street Lights', image: '/images/outdoor/solar.jpg' },
   ];
+
+  //previous latest projects
+  export const latestProjects = [
+    {
+      id: 'PAF Academy',
+      title: 'Construction of 1 x Cadet Block Triple Storey (Site-II) at PAF Academy, Asghar Khan (MES)',
+      image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+    },
+    {
+      id: 'DG W&CE (Army)',
+      title: 'DG W&CE (Army) - Laying of SNGPL Pipeline Bahawalpur Cantt (MES)',
+      image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+    },
+    {
+      id: 'Panjnad Rangers',
+      title: 'Construction of Officer Quarters at Section Headquarters Panjnad Rangers, Islamabad.',
+      image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+    },
+    {
+      id: 'PEECA',
+      title: 'Punjab Energy Efficiency & Conservation Agency (PEECA) - Govt. of Punjab',
+      image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+    },
+    {
+      id: 'Frontier Works Organization',
+      title: 'Frontier Works Organization',
+      image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+    },
+
+  ];
   
   
+  // Construction data
+  export const renovationProjects = [
+    {
+      id: 'kitchen-modern',
+      title: 'Warm modern kitchen',
+      image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Kitchen',
+      description:
+        'A warm, modern kitchen renovation featuring natural textures, matte cabinetry, and energy-efficient lighting.',
+      highlights: ['Matte oak cabinetry', 'Quartz waterfall island', 'Integrated LED profiles'],
+    },
+    {
+      id: 'living-open',
+      title: 'Open living room',
+      image: 'https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Living',
+      description:
+        'An open-plan living area with seamless indoor-outdoor flow and minimalist detailing.',
+      highlights: ['Wide-plank floors', 'Slimline sliders', 'Acoustic treatment'],
+    },
+    {
+      id: 'bath-spa',
+      title: 'Spa-inspired bathroom',
+      image: 'https://images.unsplash.com/photo-1505691723518-36a5ac3b2d62?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Bathroom',
+      description:
+        'A tranquil spa bathroom with microcement walls, rain shower, and ambient lighting.',
+      highlights: ['Microcement finish', 'Rain shower', 'Heated floors'],
+    },
+    {
+      id: 'staircase-sculptural',
+      title: 'Statement staircase',
+      image: 'https://images.unsplash.com/photo-1616593960647-3712c2df6b0f?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Architectural',
+      description:
+        'A sculptural staircase anchoring the home with steel stringers and oak treads.',
+      highlights: ['Floating treads', 'Glass balustrade', 'Concealed lighting'],
+    },
+    {
+      id: 'bedroom-minimal',
+      title: 'Minimalist bedroom',
+      image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Bedroom',
+      description:
+        'A soothing bedroom sanctuary with layered textiles and blackout integration.',
+      highlights: ['Layered textiles', 'Custom joinery', 'Blackout integration'],
+    },
+    {
+      id: 'outdoor-living',
+      title: 'Outdoor living',
+      image: 'https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Exterior',
+      description:
+        'An outdoor living space with pergola, kitchen, and weatherproof finishes.',
+      highlights: ['Pergola', 'Built-in kitchen', 'Marine-grade fixtures'],
+    },
+  ];
+
+  export const sportsProjects = [
+    {
+      id: 'football-stadium',
+      title: 'Pro football field',
+      image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Stadium',
+      description:
+        'Top-tier stadium build with broadcast-ready lighting and player-first amenities.',
+      highlights: ['FIFA-grade turf', 'Broadcast lighting', 'Locker room complex'],
+    },
+    {
+      id: 'indoor-basketball',
+      title: 'Indoor basketball court',
+      image: 'https://images.unsplash.com/photo-1521417531039-74a96e9a2e0a?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Arena',
+      description:
+        'A competition-ready court with sprung floors and spectator seating.',
+      highlights: ['Sprung maple floor', 'Tiered seating', 'Acoustic ceiling'],
+    },
+    {
+      id: 'olympic-pool',
+      title: 'Olympic pool',
+      image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Aquatics',
+      description:
+        'A world-class aquatics center engineered for precision and safety.',
+      highlights: ['Timing system', 'Climate control', 'Anti-turbulence lanes'],
+    },
+    {
+      id: 'track-field',
+      title: 'Track and field',
+      image: 'https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Track',
+      description:
+        'IAAF-spec track with advanced drainage and multi-event facilities.',
+      highlights: ['IAAF surface', 'All-weather drainage', 'Throwing cages'],
+    },
+    {
+      id: 'training-complex',
+      title: 'Training complex',
+      image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Facility',
+      description:
+        'High-performance center with gym, therapy, and analytics lab.',
+      highlights: ['Performance gym', 'Recovery suite', 'Data analytics lab'],
+    },
+    {
+      id: 'tennis-center',
+      title: 'Tennis center',
+      image: 'https://images.unsplash.com/photo-1445384763658-0400939829cd?q=80&w=1600&auto=format&fit=crop',
+      tag: 'Courts',
+      description:
+        'Multi-court complex with lighting, seating, and pro shop.',
+      highlights: ['LED court lighting', 'Grandstand', 'Pro shop'],
+    },
+  ];
   

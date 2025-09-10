@@ -1,11 +1,12 @@
 import React from 'react';
+import {values} from '../data/data';
 import {
   ShieldCheckIcon,
   LightBulbIcon,
   UsersIcon,
   SparklesIcon,
 } from '@heroicons/react/24/solid';
-import { values } from '../data/Data';
+
 
 const iconMap = {
   Integrity: <ShieldCheckIcon className="w-8 h-8 text-indigo-600" />,

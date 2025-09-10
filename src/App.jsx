@@ -5,6 +5,9 @@ import AboutUs from "./components/pages/AboutUs";
 import Lights from "./components/pages/Lights";
 import ContactUs from "./components/pages/ContactUs";
 import GTR from "./components/pages/GTR";
+import Construction from "./components/pages/Construction";
+import GenericC from "./components/construction/GenericC";
+import GenericR from "./components/construction/GenericR";
 
 export default function App() {
   return (
@@ -13,9 +16,11 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/lights" element={<Lights />} />
-        <Route path="/ContactUs" element={<ContactUs/>} />
-        <Route path="/GeneralTrading" element={<GTR/>} />
-
+        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/GeneralTrading" element={<GTR />} />
+        <Route path="/construction" element={<Construction />} />
+        <Route path="/construction/sports/:id" element={<GenericC />} />
+        <Route path="/construction/renovation/:id" element={<GenericR />} />
       </Routes>
     </Router>
   );

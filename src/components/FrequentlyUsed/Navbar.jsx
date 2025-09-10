@@ -15,14 +15,14 @@ export default function Navbar() {
     <nav className="bg-[#1F1F1F] text-white w-full fixed top-0 left-0 z-50 shadow-lg">
       <div className="w-full flex justify-between items-center px-20 h-20">
         
-        {/* Logo with glow effect (unchanged) */}
+        {/* Logo with glow effect  */}
         <div className="text-4xl font-bold relative tracking-[0.7em]">
           <Link
             to="/"
             className="relative"
             style={{
               color: '#888888',
-              textShadow: '0 0 5px rgba(255,255,150,0.3), 0 0 10px rgba(255,255,180,0.2)',
+              textShadow: '0 0 5px rgba(255,255,150,0.3), 0 0 5px rgba(255,255,180,0.2)',
               animation: 'tamscoGlow 6s ease-in-out infinite'
             }}
           >

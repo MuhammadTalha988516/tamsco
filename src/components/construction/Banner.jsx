@@ -20,11 +20,17 @@ export default function Banner() {
       <div className="pointer-events-none">
         <span
           className="absolute -top-32 -right-32 h-[420px] w-[420px] rotate-[25deg] blur-md"
-          style={{ background: 'radial-gradient(closest-side, rgba(56,189,248,0.25), rgba(56,189,248,0) 70%)' }}
+          style={{
+            background:
+              'radial-gradient(closest-side, rgba(56,189,248,0.25), rgba(56,189,248,0) 70%)',
+          }}
         />
         <span
           className="absolute -bottom-36 -left-24 h-[520px] w-[520px] -rotate-6 blur-lg"
-          style={{ background: 'radial-gradient(closest-side, rgba(99,102,241,0.22), rgba(99,102,241,0) 70%)' }}
+          style={{
+            background:
+              'radial-gradient(closest-side, rgba(99,102,241,0.22), rgba(99,102,241,0) 70%)',
+          }}
         />
       </div>
 
@@ -48,9 +54,12 @@ export default function Banner() {
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
+            {/* Get started button */}
             <a
               onClick={handlePrimaryClick}
-              className={`relative inline-flex items-center justify-center gap-2 rounded-xl border border-sky-400/30 bg-black px-5 py-3 font-bold text-white shadow-[0_10px_20px_rgba(0,0,0,0.35)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(0,0,0,0.45)] focus:outline-none ${isLoading ? 'ring-2 ring-sky-400/50 animate-pulse cursor-wait' : ''}`}
+              className={`group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl border border-sky-400/30 bg-black px-5 py-3 font-bold text-white shadow-[0_10px_20px_rgba(0,0,0,0.35)] transition-transform hover:-translate-y-2 hover:shadow-[0_14px_28px_rgba(0,0,0,0.45)] focus:outline-none ${
+                isLoading ? 'ring-2 ring-sky-400/50 animate-pulse cursor-wait' : ''
+              }`}
               href="#get-started"
               aria-label="Get started"
             >
@@ -65,8 +74,17 @@ export default function Banner() {
                   Get started
                 </>
               )}
-              <span className="pointer-events-none absolute inset-0 -z-10 rounded-xl bg-gradient-to-r from-sky-500/20 via-indigo-500/10 to-blue-500/20 blur transition duration-300 group-hover:blur-md" />
+
+              {/* Sweep shimmer effect */}
+              <span className="absolute inset-0 -z-10 overflow-hidden rounded-xl">
+                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+              </span>
+
+              {/* Glow background */}
+              <span className="pointer-events-none absolute inset-0 -z-20 rounded-xl bg-gradient-to-r from-sky-500/20 via-indigo-500/10 to-blue-500/20 blur transition duration-300 group-hover:blur-md" />
             </a>
+
+            {/* Learn more button */}
             <a
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-5 py-3 font-bold text-white backdrop-blur transition-colors hover:bg-white/15"
               href="#learn-more"
@@ -76,6 +94,7 @@ export default function Banner() {
             </a>
           </div>
 
+          {/* Stats cards */}
           <div className="mt-6 grid max-w-2xl grid-cols-1 gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-white/95 backdrop-blur sm:grid-cols-3">
             <div className="flex flex-col gap-0.5">
               <span className="text-xs text-white/75">Reliability</span>
@@ -122,5 +141,3 @@ function ArrowRight() {
     </svg>
   );
 }
-
-

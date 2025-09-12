@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.jpg"; // adjust path if needed
+import logo from "../../assets/Logo.jpg";
 
 export default function Navbar() {
   const links = [

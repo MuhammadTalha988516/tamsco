@@ -54,7 +54,7 @@ export const vision = {
   creativity, driven by purpose, and powered by people.`,
 };
 
-// Lighting Data
+// Indoor Lighting
 export const indoorLighting = [
   { title: 'Profile Lights', image: profile, description: 'Elegant profile lights providing focused, adjustable illumination for modern spaces.' },
   { title: 'Ceiling Lights', image: ceiling, description: 'Sleek ceiling fixtures offering ambient lighting solutions for any room.' },
@@ -64,6 +64,7 @@ export const indoorLighting = [
   { title: 'High Bay Lights', image: highbay, description: 'High-power, durable lights ideal for large industrial and commercial areas.' },
 ];
 
+// Outdoor Lighting
 export const outdoorLighting = [
   { title: 'Flood Lights', image: flood, description: 'Powerful flood lights ensuring safety and visibility in outdoor spaces.' },
   { title: 'Street Lights', image: street, description: 'Reliable street lighting solutions for urban and roadway environments.' },

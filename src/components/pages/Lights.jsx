@@ -3,19 +3,17 @@ import { Link } from 'react-router-dom';
 import Navbar from '../FrequentlyUsed/Navbar';
 import Footer from '../FrequentlyUsed/Footer';
 import Banner from '../Lightning/Banner';
-import LightingSection from '../Lightning/LightingSection';
 import WhyChooseUs from '../HomePage/WhyChooseUS';
 import Testimonials from '../about/Testimonials';
 import indoor1 from '../../assets/P1.png';
 import outdoor2 from '../../assets/P2.png';
-import { indoorLighting, outdoorLighting } from '../data/data';
 
 const Lights = () => {
   return (
     <>
       <Navbar />
       <Banner />
-      
+
       {/* Indoor/Outdoor Options */}
       <section className="py-24 bg-white text-gray-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -105,8 +103,7 @@ const Lights = () => {
           </Link>
         </div>
       </section>
-      
-      
+
       <Footer />
     </>
   );

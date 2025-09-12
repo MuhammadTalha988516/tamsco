@@ -1,11 +1,11 @@
 import React from 'react';
+import { values } from '../data/data';
 import {
   ShieldCheckIcon,
   LightBulbIcon,
   UsersIcon,
   SparklesIcon,
 } from '@heroicons/react/24/solid';
-import { values } from '../data/Data';
 
 const iconMap = {
   Integrity: <ShieldCheckIcon className="w-8 h-8 text-indigo-600" />,
@@ -18,9 +18,12 @@ const Values = () => {
   return (
     <section className="bg-gray-50 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center mb-14">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Our Core Values</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          Our Core Values
+        </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          These values shape our culture, drive our work, and guide how we collaborate with our clients.
+          These values shape our culture, drive our work, and guide how we
+          collaborate with our clients.
         </p>
       </div>
 
@@ -35,7 +38,9 @@ const Values = () => {
                 {iconMap[value.title]}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              {value.title}
+            </h3>
             <p className="text-gray-600 text-sm">{value.desc}</p>
           </div>
         ))}

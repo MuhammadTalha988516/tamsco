@@ -1,5 +1,5 @@
 import React from 'react';
-import { testimonials } from '../data/Data';
+import { testimonials } from '../data/data';
 
 const Testimonials = () => {
   return (
@@ -30,7 +30,9 @@ const Testimonials = () => {
                 <span className="text-sm text-gray-500">{testimonial.role}</span>
               </div>
             </div>
-            <p className="text-gray-700 italic leading-relaxed">"{testimonial.text}"</p>
+            <p className="text-gray-700 italic leading-relaxed">
+              "{testimonial.text}"
+            </p>
           </div>
         ))}
       </div>

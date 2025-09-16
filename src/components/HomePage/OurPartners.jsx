@@ -32,7 +32,7 @@ export default function OurPartners() {
 
   return (
     <section className="w-full bg-white py-28 overflow-hidden">
-      <h2 className="text-center text-4xl md:text-5xl font-bold text-blue-900 mb-20">
+      <h2 className="text-center text-4xl md:text-5xl font-bold text-blue-500 mb-20">
         Our Partners
       </h2>
 

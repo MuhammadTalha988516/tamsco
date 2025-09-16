@@ -27,7 +27,7 @@ export default function Ticker({
   ));
 
   return (
-    <div className="group flex overflow-hidden  bg-gray-900 py-3 w-full mb-10">
+    <div className="group flex overflow-hidden  bg-green-500 py-3 w-full mb-10">
       <div
         className={`flex shrink-0 animate-marquee ${
           pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""

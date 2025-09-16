@@ -1,17 +1,103 @@
 import React from "react";
+import logo from "../../assets/logo.jpg"; // adjust path if needed
+import { motion } from "framer-motion";
 
 export default function Footer() {
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Lights", path: "/lights" },
+    { name: "Construction", path: "/construction" },
+    { name: "General Trading", path: "/GeneralTrading" },
+    { name: "Contact", path: "/ContactUs" },
+  ];
+
   return (
-    <footer className="h-80 bg-[#1F1F1F] text-white w-full py-10 mt-20">
-      <div className="w-full flex flex-col items-center space-y-10 px-12">
-        <p className="text-xl">
-          © {new Date().getFullYear()} TAMSCO. All rights reserved.
-        </p>
-        <div className="flex space-x-6 text-lg">
-          <a href="#" className="hover:text-yellow-300 transition">Privacy Policy</a>
-          <a href="#" className="hover:text-yellow-300 transition">Terms of Service</a>
-          <a href="#" className="hover:text-yellow-300 transition">Contact</a>
-        </div>
+    <footer className="bg-blue-800 text-gray-200">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16 grid grid-cols-1 md:grid-cols-3 gap-14">
+        
+        {/* Logo + Short About */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <img
+            src={logo}
+            alt="TAMSCO Logo"
+            className="w-36 mb-6 rounded-lg shadow-md"
+          />
+          <p className="text-sm leading-relaxed opacity-90">
+            Trusted in delivering quality across multiple sectors — from 
+            construction to technology. Have any query? Contact us, we are here for you.
+          </p>
+        </motion.div>
+
+        {/* Get in Touch */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-lg font-semibold mb-6 border-b border-gray-500/30 pb-2">
+            Get In Touch
+          </h3>
+          <p className="text-sm mb-4">
+            <span className="font-medium">Address:</span><br />
+            79/80, 4th Floor, Executive Block,<br />
+            Gulberg Greens, Islamabad (44022)
+          </p>
+          <p className="text-sm mb-4">
+            <span className="font-medium">Contact:</span><br />
+            PIBX: +92 51 5155900 <br />
+            Fax: +92 51 5155955
+          </p>
+          <p className="text-sm">
+            <span className="font-medium">Email:</span><br />
+            <a href="mailto:tamsco.pk@gmail.com" className="hover:underline">
+              tamsco.pk@gmail.com
+            </a><br />
+            <a href="mailto:info@tamscoworld.com" className="hover:underline">
+              info@tamscoworld.com
+            </a>
+          </p>
+        </motion.div>
+
+        {/* Quick Links */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-lg font-semibold mb-6 border-b border-gray-500/30 pb-2">
+            Quick Links
+          </h3>
+          <ul className="grid grid-cols-2 gap-y-3">
+            {links.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.path}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = link.path; // ✅ hard reload from top
+                  }}
+                  className="text-sm opacity-90 hover:opacity-100 relative group"
+                >
+                  {link.name}
+                  <span className="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="bg-blue-900 py-5 text-center text-gray-400 text-sm border-t border-gray-700/40">
+        © {new Date().getFullYear()} TAMSCO. All Rights Reserved.
       </div>
     </footer>
   );

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Policy() {
   return (
-    <section className="relative w-full min-h-screen bg-gray-900 flex items-center justify-center py-20">
+    <section className="relative w-full min-h-screen bg-blue-600 flex items-center justify-center py-20">
       <motion.div
         className="relative z-10 max-w-4xl text-center text-white px-6"
         initial={{ opacity: 0, y: 50 }}
@@ -11,12 +11,12 @@ export default function Policy() {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-blue-600">
+        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-gray-300">
           HOW WE DO IT
         </h2>
 
         <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-300">
-          At <span className="font-bold text-blue-500">TAMSCO WORLD</span>, we don’t just
+          At <span className="font-bold text-green-600">TAMSCO WORLD</span>, we don’t just
           deliver projects, <span className="text-gray-300 font-semibold">we deliver trust</span>.
           Whether it is illuminating a{" "}
           <span className="text-gray-300 font-semibold">city block</span>, building a{" "}

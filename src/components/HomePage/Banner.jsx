@@ -10,7 +10,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <section className="bg-gray-900 text-white w-full min-h-[90vh] flex items-center"> {/* slightly shorter height */}
+    <section className="bg-blue-600 text-white w-full min-h-[90vh] flex items-center"> {/* slightly shorter height */}
       {/* Left Side Text */}
       <div
         className={`w-11/20 transition-all duration-2000 ease-out ${

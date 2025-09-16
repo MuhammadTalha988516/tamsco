@@ -6,19 +6,19 @@ const blocks = [
     title: "Lighting",
     description:
       "World-class lighting solutions for modern projects. Our innovative lighting designs brighten every space efficiently and beautifully.",
-    icon: <Lightbulb className="w-16 h-16 text-blue-500 group-hover:text-blue-700 transition-colors duration-500" />,
+    icon: <Lightbulb className="w-16 h-16 text-yellow-300 group-hover:text-yellow-400 transition-colors duration-500" />,
   },
   {
     title: "General Trading",
     description:
       "Cutting-edge trading solutions for any space. We ensure seamless operations and offer exceptional products to meet diverse industry demands.",
-    icon: <ShoppingBag className="w-16 h-16 text-green-500 group-hover:text-green-700 transition-colors duration-500" />,
+    icon: <ShoppingBag className="w-16 h-16 text-green-400 group-hover:text-green-500 transition-colors duration-500" />,
   },
   {
     title: "Construction",
     description:
       "Innovative construction technology to power your projects. From planning to execution, we provide top-notch expertise and modern solutions.",
-    icon: <Building2 className="w-16 h-16 text-orange-500 group-hover:text-orange-700 transition-colors duration-500" />,
+    icon: <Building2 className="w-16 h-16 text-orange-400 group-hover:text-orange-500 transition-colors duration-500" />,
   },
 ];
 
@@ -29,7 +29,7 @@ export default function Boxes() {
         {blocks.map((block, idx) => (
           <div
             key={idx}
-            className="relative flex flex-col items-center justify-center p-8 h-96 rounded-2xl bg-gray-900 text-white cursor-pointer group shadow-lg overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl"
+            className="relative flex flex-col items-center justify-center p-8 h-96 rounded-2xl bg-blue-600 text-white cursor-pointer group shadow-lg overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl"
           >
             {/* Icon */}
             <div className="mb-6 transform transition-transform duration-700 group-hover:scale-110">
@@ -37,7 +37,7 @@ export default function Boxes() {
             </div>
 
             {/* Title */}
-            <h2 className="text-2xl font-bold mb-4 text-center transition-colors duration-500 group-hover:text-blue-400">
+            <h2 className="text-2xl font-bold mb-4 text-center transition-colors duration-500 group-hover:text-gray-300">
               {block.title}
             </h2>
 

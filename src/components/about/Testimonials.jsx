@@ -3,12 +3,12 @@ import { testimonials } from '../data/data';
 
 const Testimonials = () => {
   return (
-    <section className="bg-white py-20 px-6">
+    <section className="bg-[#1C81BA] py-20 px-6">
       <div className="max-w-6xl mx-auto text-center mb-14">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
           What Our Clients Say
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
           Real feedback from real people we've had the pleasure of working with.
         </p>
       </div>
@@ -20,11 +20,7 @@ const Testimonials = () => {
             className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group"
           >
             <div className="flex items-center gap-4 mb-6">
-              <img
-                src={testimonial.avatar}
-                alt={testimonial.name}
-                className="w-14 h-14 rounded-full object-cover border-2 border-indigo-500 group-hover:scale-105 transition-transform duration-300"
-              />
+              
               <div className="text-left">
                 <h4 className="text-lg font-semibold text-gray-900">{testimonial.name}</h4>
                 <span className="text-sm text-gray-500">{testimonial.role}</span>

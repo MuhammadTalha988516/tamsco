@@ -6,8 +6,8 @@ export default function Navbar() {
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Lights", path: "/lights" },
-    { name: "Construction", path: "/construction" },
+    { name: "Lighting Solutions", path: "/lights" },
+    { name: "Construction & Renovation", path: "/construction" },
     { name: "General Trading", path: "/GeneralTrading" },
     { name: "Contact", path: "/ContactUs" },
   ];
@@ -15,17 +15,13 @@ export default function Navbar() {
   return (
     <nav className="bg-white text-black w-full fixed top-0 left-0 z-50 shadow-lg">
       <div className="w-full flex justify-between items-center px-20 h-20">
-
         <div className="relative">
           <Link to="/" className="relative flex items-center">
             <img
               src={logo}
               alt="TAMSCO Logo"
-              className="w-60 h-60 object-contain" // adjusted to a reasonable size
-              style={{
-                filter: "drop-shadow(0 0 5px rgba(255,255,150,0.3)) drop-shadow(0 0 10px rgba(255,255,180,0.2))",
-                animation: "tamscoGlow 6s ease-in-out infinite"
-              }}
+              className="w-60 h-60 object-contain" 
+              
             />
           </Link>
 

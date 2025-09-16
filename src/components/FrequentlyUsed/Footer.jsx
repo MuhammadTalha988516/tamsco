@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="h-80 bg-[#1F1F1F] text-white w-full py-10 mt-20">
+    <footer className="h-80 bg-[#001721] text-white w-full py-10 mt-20">
       <div className="w-full flex flex-col items-center space-y-10 px-12">
         <p className="text-xl">
           © {new Date().getFullYear()} TAMSCO. All rights reserved.

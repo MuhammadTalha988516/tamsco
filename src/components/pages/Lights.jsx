@@ -5,8 +5,8 @@ import Footer from '../FrequentlyUsed/Footer';
 import Banner from '../Lightning/Banner';
 import WhyChooseUs from '../HomePage/WhyChooseUS';
 import Testimonials from '../about/Testimonials';
-import indoor1 from '../../assets/P1.png';
-import outdoor2 from '../../assets/P2.png';
+import indoor1 from '../../assets/indoor.jpg';
+import outdoor2 from '../../assets/outdoor.jpg';
 
 const Lights = () => {
   return (
@@ -18,7 +18,7 @@ const Lights = () => {
       <section className="py-24 bg-white text-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-extrabold text-blue-900">
+            <h2 className="text-5xl font-extrabold text-[#1C80BB]">
               Choose Your Lighting Solution
             </h2>
           </div>
@@ -30,23 +30,18 @@ const Lights = () => {
                 alt="Indoor Lighting"
                 className="w-full h-96 object-cover transform group-hover:scale-105 transition duration-700"
               />
-              <div className="absolute inset-0 bg-blue-900/60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500">
+              <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <h3 className="text-4xl font-bold text-white mb-4">
                   Indoor Lighting
                 </h3>
                 <p className="text-lg text-white/90 mb-6">Illuminate your interiors</p>
                 <div className="flex space-x-3">
+                  
                   <Link
                     to="/indoor"
-                    className="bg-white text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition duration-300"
+                    className="border-2 border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-100 hover:text-black transition duration-300"
                   >
-                    Standard View
-                  </Link>
-                  <Link
-                    to="/genericin"
-                    className="border-2 border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-100 hover:text-blue-900 transition duration-300"
-                  >
-                    Premium View
+                    View
                   </Link>
                 </div>
               </div>
@@ -59,21 +54,16 @@ const Lights = () => {
                 alt="Outdoor Lighting"
                 className="w-full h-96 object-cover transform group-hover:scale-105 transition duration-700"
               />
-              <div className="absolute inset-0 bg-blue-800/60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500">
+              <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <h3 className="text-4xl font-bold text-white mb-4">Outdoor Lighting</h3>
                 <p className="text-lg text-white/90 mb-6">Shine bright outside</p>
                 <div className="flex space-x-3">
+                 
                   <Link
                     to="/outdoor"
-                    className="bg-white text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition duration-300"
+                    className="border-2 border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300"
                   >
-                    Standard View
-                  </Link>
-                  <Link
-                    to="/genericout"
-                    className="border-2 border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition duration-300"
-                  >
-                    Luxury View
+                    View
                   </Link>
                 </div>
               </div>

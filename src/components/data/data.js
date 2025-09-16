@@ -1,32 +1,42 @@
-import profile from '../../assets/P1.png';
-import ceiling from '../../assets/P2.png';
-import linear from '../../assets/P3.png';
-import tube from '../../assets/P4.png';
-import cov from '../../assets/P5.png';
-import highbay from '../../assets/P6.png';
-import flood from '../../assets/P7.png';
-import street from '../../assets/P8.png';
-import solar from '../../assets/P9.png';
+import profile from '../../assets/profile.jpg';
+import ceiling from '../../assets/ceiling.jpg';
+import linear from '../../assets/linear.jpg';
+import tube from '../../assets/tube.jpg';
+import cov from '../../assets/cov.jpg';
+import highbay from '../../assets/highbay.jpg';
+import flood from '../../assets/flood.jpg';
+import street from '../../assets/street.jpg';
+import solar from '../../assets/solar.jpg';
+import paf from '../../assets/paf.jpg';
+import basketball from '../../assets/basketball.jpg';
+import football from '../../assets/football.jpg';
+import tennis from '../../assets/tenniscenter.jpg';
+import kitchen from '../../assets/modernkitchen.jpg';
+import livingroom from '../../assets/livingroom.jpg';
+import minibedroom from '../../assets/minibedroom.jpg';
+import staircase from '../../assets/staircase.jpg';
+import bathroom from '../../assets/bathroom.jpg';
+
 
 // Testimonials
 export const testimonials = [
   {
-    name: 'Jane Doe',
-    role: 'CEO, FutureCorp',
-    text: 'Their professionalism and attention to detail exceeded our expectations. Truly transformative!',
-    avatar: 'https://i.pravatar.cc/100?img=1',
+    name: 'Army Housing Directorate',
+    role: 'Director General Housing',
+    text: 'TAMSCO contributed with the supply & Installation of EcoTech LED Street Light. We recognize their valuable contributions and Performance in Pak Army Housing Projects',
+    
   },
   {
-    name: 'John Smith',
-    role: 'CTO, TechNova',
-    text: 'A fantastic team with innovative ideas and flawless execution. Highly recommended.',
-    avatar: 'https://i.pravatar.cc/100?img=2',
+    name: 'OGDCL',
+    role: 'General Manager Administration ',
+    text: 'We appreciate the contribution of your company in order to save the energy by providing such an excellent product which is need of the hour of our country',
+    
   },
   {
-    name: 'Emily Davis',
-    role: 'Founder, GreenPath',
-    text: 'They brought our vision to life with creativity, precision, and passion.',
-    avatar: 'https://i.pravatar.cc/100?img=3',
+    name: 'PEECA ',
+    role: 'Assistant Manager M&E ',
+    text: 'TAMSCO has carried out all the work components of the project successfully and hander over the functional project within the prescribed timeline',
+    
   },
 ];
 
@@ -76,7 +86,7 @@ export const latestProjects = [
   {
     id: 'PAF Academy',
     title: 'Construction of 1 x Cadet Block Triple Storey (Site-II) at PAF Academy, Asghar Khan (MES)',
-    image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+    image: paf,
   },
   {
     id: 'DG W&CE (Army)',
@@ -105,7 +115,7 @@ export const renovationProjects = [
   {
     id: 'kitchen-modern',
     title: 'Warm modern kitchen',
-    image: 'https://images.unsplash.com/photo-1505692794403-34d4982c4638?q=80&w=1600&auto=format&fit=crop',
+    image: kitchen,
     tag: 'Kitchen',
     description: 'A warm, modern kitchen renovation featuring natural textures, matte cabinetry, and energy-efficient lighting.',
     highlights: ['Matte oak cabinetry', 'Quartz waterfall island', 'Integrated LED profiles'],
@@ -113,7 +123,7 @@ export const renovationProjects = [
   {
     id: 'living-open',
     title: 'Open living room',
-    image: 'https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1600&auto=format&fit=crop',
+    image: livingroom,
     tag: 'Living',
     description: 'An open-plan living area with seamless indoor-outdoor flow and minimalist detailing.',
     highlights: ['Wide-plank floors', 'Slimline sliders', 'Acoustic treatment'],
@@ -121,7 +131,7 @@ export const renovationProjects = [
   {
     id: 'bath-spa',
     title: 'Spa-inspired bathroom',
-    image: 'https://images.unsplash.com/photo-1505691723518-36a5ac3b2d62?q=80&w=1600&auto=format&fit=crop',
+    image: bathroom,
     tag: 'Bathroom',
     description: 'A tranquil spa bathroom with microcement walls, rain shower, and ambient lighting.',
     highlights: ['Microcement finish', 'Rain shower', 'Heated floors'],
@@ -129,7 +139,7 @@ export const renovationProjects = [
   {
     id: 'staircase-sculptural',
     title: 'Statement staircase',
-    image: 'https://images.unsplash.com/photo-1616593960647-3712c2df6b0f?q=80&w=1600&auto=format&fit=crop',
+    image: staircase,
     tag: 'Architectural',
     description: 'A sculptural staircase anchoring the home with steel stringers and oak treads.',
     highlights: ['Floating treads', 'Glass balustrade', 'Concealed lighting'],
@@ -137,7 +147,7 @@ export const renovationProjects = [
   {
     id: 'bedroom-minimal',
     title: 'Minimalist bedroom',
-    image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1600&auto=format&fit=crop',
+    image: minibedroom,
     tag: 'Bedroom',
     description: 'A soothing bedroom sanctuary with layered textiles and blackout integration.',
     highlights: ['Layered textiles', 'Custom joinery', 'Blackout integration'],
@@ -157,7 +167,7 @@ export const sportsProjects = [
   {
     id: 'football-stadium',
     title: 'Pro football field',
-    image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1600&auto=format&fit=crop',
+    image: football,
     tag: 'Stadium',
     description: 'Top-tier stadium build with broadcast-ready lighting and player-first amenities.',
     highlights: ['FIFA-grade turf', 'Broadcast lighting', 'Locker room complex'],
@@ -165,7 +175,7 @@ export const sportsProjects = [
   {
     id: 'indoor-basketball',
     title: 'Indoor basketball court',
-    image: 'https://images.unsplash.com/photo-1521417531039-74a96e9a2e0a?q=80&w=1600&auto=format&fit=crop',
+    image: basketball,
     tag: 'Arena',
     description: 'A competition-ready court with sprung floors and spectator seating.',
     highlights: ['Sprung maple floor', 'Tiered seating', 'Acoustic ceiling'],
@@ -197,9 +207,11 @@ export const sportsProjects = [
   {
     id: 'tennis-center',
     title: 'Tennis center',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop',
+    image: tennis,
     tag: 'Courts',
     description: 'Multi-court complex with lighting, seating, and pro shop.',
     highlights: ['LED court lighting', 'Grandstand', 'Pro shop'],
   },
 ];
+
+

@@ -1,18 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { sportsProjects } from '../data/data.js';
 
 export default function Sports() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-5 pt-10">
         <h2 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-cyan-600"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm0 2a7.977 7.977 0 0 1 5.657 2.343L14 10h6a7.977 7.977 0 0 1-2.343 5.657L14 14v6A8 8 0 0 1 12 4Z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-cyan-600">
+            <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm0 2a7.977 7.977 0 0 1 5.657 2.343L14 10h6a7.977 7.977 0 0 1-2.343 5.657L14 14v6A8 8 0 0 1 12 4Z"/>
+          </svg>
           Sports Construction
         </h2>
-        <p className="mt-1 text-zinc-600">High-performance arenas, fields, and complexes engineered for victory.</p>
+        <p className="mt-1 text-zinc-600">
+          High-performance arenas, fields, and complexes engineered for victory.
+        </p>
       </div>
+
       {/* Hero */}
-      <div className="relative isolate bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white">
+      <div className="relative isolate mt-6 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white">
         <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-white/10 blur-2xl" />
         <div className="absolute -bottom-28 -left-20 h-[28rem] w-[28rem] rounded-full bg-white/10 blur-3xl" />
 
@@ -28,12 +34,18 @@ export default function Sports() {
             performance, safety, and fan experience.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#projects" className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-gray-900 px-5 py-3 font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-gray-900 px-5 py-3 font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+            >
               Explore projects
             </a>
-            <a href="#contact" className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-3 font-bold text-white backdrop-blur transition hover:bg-white/15">
+            <Link
+              to="/ContactUs"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-3 font-bold text-white backdrop-blur transition hover:bg-white/15"
+            >
               Get a quote
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -41,12 +53,15 @@ export default function Sports() {
       {/* Projects Grid */}
       <div id="projects" className="mx-auto max-w-6xl px-5 pb-14 pt-8 sm:pb-20">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <ImageCard to="/construction/sports/football-stadium" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1600&auto=format&fit=crop" title="Pro football field" tag="Stadium" />
-          <ImageCard to="/construction/sports/indoor-basketball" src="https://images.unsplash.com/photo-1521417531039-74a96e9a2e0a?q=80&w=1600&auto=format&fit=crop" title="Indoor basketball court" tag="Arena" />
-          <ImageCard to="/construction/sports/olympic-pool" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop" title="Olympic pool" tag="Aquatics" />
-          <ImageCard to="/construction/sports/track-field" src="https://images.unsplash.com/photo-1521417534535-0f3cb7d1e4c5?q=80&w=1600&auto=format&fit=crop" title="Track and field" tag="Track" />
-          <ImageCard to="/construction/sports/training-complex" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop" title="Training complex" tag="Facility" />
-          <ImageCard to="/construction/sports/tennis-center" src="https://images.unsplash.com/photo-1445384763658-0400939829cd?q=80&w=1600&auto=format&fit=crop" title="Tennis center" tag="Courts" />
+          {sportsProjects.map((project) => (
+            <ImageCard
+              key={project.id}
+              src={project.image}
+              title={project.title}
+              tag={project.tag}
+            
+            />
+          ))}
         </div>
 
         {/* Highlights */}
@@ -63,7 +78,7 @@ export default function Sports() {
 function ImageCard({ src, title, tag, to }) {
   return (
     <figure className="group relative overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition hover:shadow-xl">
-      <Link to={to}>
+      <Link to={to || '#'}>
         <img
           src={src}
           alt={title}
@@ -83,7 +98,17 @@ function Feature({ iconBg, title, desc }) {
   return (
     <div className="flex items-start gap-3 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm">
       <span className={`mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-xl ${iconBg}`}>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-700">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="text-zinc-700"
+        >
           <circle cx="12" cy="12" r="10" />
           <path d="m9 12 2 2 4-4" />
         </svg>
@@ -95,4 +120,3 @@ function Feature({ iconBg, title, desc }) {
     </div>
   );
 }
-

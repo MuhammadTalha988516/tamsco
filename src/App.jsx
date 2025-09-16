@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/FrequentlyUsed/ScrolltoTop";
+import ScrolltoTop from "./components/FrequentlyUsed/ScrolltoTop";
 import HomePage from "./components/pages/Homepage";
 import AboutUs from "./components/pages/AboutUs";
 import Lights from "./components/pages/Lights";
@@ -22,7 +22,7 @@ import RFP from "./components/pages/RFP";
 export default function App() {
   return (
     <Router>
-      <ScrollToTop />
+      <ScrolltoTop />
       <Routes>
         {/* Main Pages */}
         <Route path="/" element={<HomePage />} />

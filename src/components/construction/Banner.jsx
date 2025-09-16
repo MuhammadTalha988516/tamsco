@@ -1,16 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-// Beautiful, responsive banner using Tailwind CSS utility classes
 export default function Banner() {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handlePrimaryClick = (e) => {
-    e.preventDefault();
-    if (isLoading) return;
-    setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 1800);
-  };
-
   return (
     <section
       className="relative overflow-hidden bg-gradient-to-b from-black via-slate-900 to-blue-900"
@@ -43,9 +34,7 @@ export default function Banner() {
 
           <h1 className="mt-4 text-4xl font-extrabold leading-tight text-white sm:text-6xl">
             Build confidently with{' '}
-            <span className="bg-gradient-to-r from-sky-200 via-indigo-200 to-blue-100 bg-clip-text text-transparent">
-              Tamsco
-            </span>
+            <span className="text-[#1C80BB]">Tamsco</span>
           </h1>
 
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
@@ -54,26 +43,14 @@ export default function Banner() {
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
-            {/* Get started button */}
-            <a
-              onClick={handlePrimaryClick}
-              className={`group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl border border-sky-400/30 bg-black px-5 py-3 font-bold text-white shadow-[0_10px_20px_rgba(0,0,0,0.35)] transition-transform hover:-translate-y-2 hover:shadow-[0_14px_28px_rgba(0,0,0,0.45)] focus:outline-none ${
-                isLoading ? 'ring-2 ring-sky-400/50 animate-pulse cursor-wait' : ''
-              }`}
-              href="#get-started"
+            {/* Get started button → ContactUs page */}
+            <Link
+              to="/ContactUs"
+              className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl border border-sky-400/30 bg-black px-5 py-3 font-bold text-white shadow-[0_10px_20px_rgba(0,0,0,0.35)] transition-transform hover:-translate-y-2 hover:shadow-[0_14px_28px_rgba(0,0,0,0.45)] focus:outline-none"
               aria-label="Get started"
             >
-              {isLoading ? (
-                <>
-                  <span className="h-4 w-4 animate-spin rounded-full border-2 border-sky-300 border-t-transparent" />
-                  Processing...
-                </>
-              ) : (
-                <>
-                  <ArrowRight />
-                  Get started
-                </>
-              )}
+              <ArrowRight />
+              Get started
 
               {/* Sweep shimmer effect */}
               <span className="absolute inset-0 -z-10 overflow-hidden rounded-xl">
@@ -82,16 +59,16 @@ export default function Banner() {
 
               {/* Glow background */}
               <span className="pointer-events-none absolute inset-0 -z-20 rounded-xl bg-gradient-to-r from-sky-500/20 via-indigo-500/10 to-blue-500/20 blur transition duration-300 group-hover:blur-md" />
-            </a>
+            </Link>
 
             {/* Learn more button */}
-            <a
+            <Link
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-5 py-3 font-bold text-white backdrop-blur transition-colors hover:bg-white/15"
-              href="#learn-more"
+              to="/about"
               aria-label="Learn more"
             >
               Learn more
-            </a>
+            </Link>
           </div>
 
           {/* Stats cards */}

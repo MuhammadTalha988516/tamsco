@@ -1,9 +1,10 @@
 import React from 'react';
+import lightingBanner from '../../assets/lighting.jpeg';
 
 const Banner = () => (
-  <section className="relative h-[350px] md:h-[450px] bg-gradient-to-br from-blue-800 to-indigo-900 text-white flex items-center justify-center overflow-hidden">
+  <section className="relative h-[350px] md:h-[450px] bg-gradient-to-br bg-black/90 text-white flex items-center justify-center overflow-hidden">
     <img
-      src="/images/lighting-banner.jpg"
+      src={lightingBanner}
       alt="Lighting Solutions"
       className="absolute inset-0 w-full h-full object-cover opacity-20"
     />
@@ -12,7 +13,7 @@ const Banner = () => (
         Lighting Solutions
       </h1>
       <p className="mt-3 text-lg md:text-xl text-blue-100/80">
-        Experience brilliance—indoors and out.
+        Experience brilliance, indoors and outdoors.
       </p>
     </div>
   </section>

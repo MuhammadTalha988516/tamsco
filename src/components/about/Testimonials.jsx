@@ -20,7 +20,6 @@ const Testimonials = () => {
             className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 group"
           >
             <div className="flex items-center gap-4 mb-6">
-              
               <div className="text-left">
                 <h4 className="text-lg font-semibold text-gray-900">{testimonial.name}</h4>
                 <span className="text-sm text-gray-500">{testimonial.role}</span>

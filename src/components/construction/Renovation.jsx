@@ -5,8 +5,9 @@ import { renovationProjects } from '../data/data.js';
 export default function Renovation() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-5 pt-10">
-        <h2 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
+      {/* Header */}
+      <div className="mx-auto max-w-6xl px-5 pt-10 text-center sm:text-left">
+        <h2 className="flex items-center justify-center sm:justify-start gap-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
           <svg
             width="18"
             height="18"
@@ -18,35 +19,34 @@ export default function Renovation() {
           </svg>
           Renovation
         </h2>
-        <p className="mt-1 text-zinc-600">
+        <p className="mt-1 text-zinc-600 text-sm sm:text-base">
           Premium home transformations with craftsmanship, materials, and timeless design.
         </p>
       </div>
 
       {/* Hero */}
       <div className="relative isolate mt-6 bg-gradient-to-br from-amber-500 via-rose-500 to-fuchsia-500 text-white">
-        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-white/10 blur-2xl" />
-        <div className="absolute -bottom-32 -right-20 h-[28rem] w-[28rem] rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -top-24 -left-24 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-white/10 blur-2xl" />
+        <div className="absolute -bottom-24 -right-20 h-80 w-80 sm:h-[28rem] sm:w-[28rem] rounded-full bg-white/10 blur-3xl" />
 
-        <div className="relative mx-auto max-w-6xl px-5 py-16 sm:py-24">
+        <div className="relative mx-auto max-w-6xl px-5 py-14 sm:py-20 text-center sm:text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/90 backdrop-blur">
             Transform your space
           </span>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight sm:text-6xl">
+          <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
             Premium Renovations, Crafted to Last
           </h1>
-          <p className="mt-4 max-w-2xl text-white/90">
+          <p className="mt-4 max-w-2xl text-white/90 mx-auto sm:mx-0 text-sm sm:text-base">
             From kitchens to full-home makeovers, we deliver stunning results with meticulous
             detail, modern materials, and a client-first approach.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap justify-center sm:justify-start gap-3">
             <Link
               to="/ContactUs"
               className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-gray-900 px-5 py-3 font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
             >
               Book a consultation
             </Link>
-           
           </div>
         </div>
       </div>
@@ -60,7 +60,6 @@ export default function Renovation() {
               src={project.image}
               title={project.title}
               tag={project.tag}
-              
             />
           ))}
         </div>
@@ -95,7 +94,7 @@ function ImageCard({ src, title, tag, to }) {
         <img
           src={src}
           alt={title}
-          className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-48 sm:h-64 w-full object-cover transition duration-500 group-hover:scale-105"
           loading="lazy"
         />
       </Link>

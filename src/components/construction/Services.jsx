@@ -77,32 +77,32 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full py-20 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
           Our <span className="text-[#1C80BB]">Services</span>
         </h2>
-        <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-3 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
           Delivering world-class sports infrastructure and flooring solutions —
           engineered for performance, durability, and style.
         </p>
       </div>
 
-      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => {
           const Icon = service.icon;
           return (
             <div
               key={index}
-              className="group relative flex flex-col items-start p-6 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-[#1C80BB]/40"
+              className="group relative flex flex-col items-start p-4 sm:p-6 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-[#1C80BB]/40"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#1C80BB]/10 to-[#1C80BB]/5 text-[#1C80BB] mb-4 group-hover:scale-110 transition-transform duration-500">
-                <Icon className="h-7 w-7" />
+              <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#1C80BB]/10 to-[#1C80BB]/5 text-[#1C80BB] mb-4 group-hover:scale-110 transition-transform duration-500">
+                <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#1C80BB] transition-colors">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-[#1C80BB] transition-colors">
                 {service.title}
               </h3>
-              <p className="mt-2 text-gray-600 text-sm leading-relaxed">
+              <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed max-w-sm">
                 {service.description}
               </p>
             </div>

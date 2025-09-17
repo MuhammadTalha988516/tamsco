@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
       bg: "bg-green-100",
       title: "Proven Commitment",
       desc: "Every client, every project, every time — we give our 100%.",
-      wide: true, // 👈 mark this as the wide card
+      wide: true, // 👈 wide card
     },
   ];
 
@@ -52,24 +52,25 @@ export default function WhyChooseUs() {
           <span className="text-blue-500">TAMSCO</span>
         </motion.h2>
 
-        {/* Features grid (all 5 inside one grid) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+        {/* Features grid */}
+        <div role="list" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           {features.map((feature, idx) => (
             <motion.div
+              role="listitem"
               key={idx}
-              className={`bg-white rounded-2xl shadow-md p-8 text-center flex flex-col items-center justify-between h-full transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl ${
+              className={`bg-white rounded-2xl shadow-md p-8 text-center flex flex-col items-center justify-between h-full transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl ${
                 feature.wide ? "lg:col-span-4" : ""
               }`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: idx * 0.2 }}
+              transition={{ duration: 0.8, delay: idx * 0.15 }}
               viewport={{ once: true }}
             >
               <div className={`w-16 h-16 flex items-center justify-center rounded-full ${feature.bg} mb-4`}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-800 pb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.desc}</p>
+              <p className="text-base text-gray-600">{feature.desc}</p>
             </motion.div>
           ))}
         </div>

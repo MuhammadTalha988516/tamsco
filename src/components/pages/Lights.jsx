@@ -5,8 +5,8 @@ import Footer from '../FrequentlyUsed/Footer';
 import Banner from '../Lightning/Banner';
 import WhyChooseUs from '../HomePage/WhyChooseUS';
 import Testimonials from '../about/Testimonials';
-import indoor1 from '../../assets/indoor.jpg';
-import outdoor2 from '../../assets/outdoor.jpg';
+import indoor1 from '../../assets/indoor.webp';
+import outdoor2 from '../../assets/outdoor.webp';
 
 const Lights = () => {
   return (

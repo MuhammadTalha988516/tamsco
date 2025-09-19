@@ -1,15 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail } from "lucide-react";
-import ContactImg from "../../assets/ContactUs.webp"; // ✅ local image
+import {
+  MapPin,
+  Phone,
+  Mail,
+  User,
+  Building2,
+  Home,
+  MessageSquare,
+} from "lucide-react";
+import ContactImg from "../../assets/ContactUs.webp";
+import emailjs from "emailjs-com";
 
 export default function ContactUs() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  // EmailJS config
+  const SERVICE_ID = "service_0nxe2ps";
+  const TEMPLATE_ID_CONTACT = "template_c615z4b"; // to company
+  const TEMPLATE_ID_REPLY = "template_o9br3t9";   // auto reply to customer
+  const PUBLIC_KEY = "L1yoCCy8bGirZileJ";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      organization: formData.get("organization"),
+      city: formData.get("city"),
+      inquiry: formData.get("inquiry"),
+    };
+
+    try {
+      // Send to company (admin)
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID_CONTACT,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          organization: data.organization || "—",
+          city: data.city || "—",
+          message: data.inquiry || "—",
+        },
+        PUBLIC_KEY
+      );
+
+      // Send auto-reply to customer
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID_REPLY,
+        {
+          name: data.name,
+          email: data.email,
+        },
+        PUBLIC_KEY
+      );
+
+      setStatus("✅ Message sent successfully! Check your email.");
+      e.target.reset();
+    } catch (err) {
+      console.error(err);
+      setStatus("❌ Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-gray-50 mt-10 min-h-screen py-10 px-4 sm:px-6 lg:px-10">
-      {/* Full Page Grid */}
       <div className="w-full bg-white shadow-lg overflow-hidden rounded-lg">
         <div className="grid md:grid-cols-2 min-h-[600px]">
-          {/* Left Image with scroll animation */}
+          {/* Left Image */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -40,106 +107,81 @@ export default function ContactUs() {
               providing exceptional service and support.
             </p>
 
-            <form className="space-y-4 w-full">
+            <form className="space-y-4 w-full" onSubmit={handleSubmit}>
               {/* Name */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <label className="block text-sm font-medium text-gray-700">
-                  Name *
-                </label>
+              <div className="flex items-center border rounded-lg p-3 gap-2">
+                <User className="text-indigo-600 w-5 h-5" />
                 <input
                   type="text"
+                  name="name"
                   required
                   placeholder="Enter your name"
-                  className="w-full border rounded-lg px-4 py-2 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 outline-none"
+                  className="w-full outline-none"
                 />
-              </motion.div>
+              </div>
 
               {/* Email */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <label className="block text-sm font-medium text-gray-700">
-                  Email *
-                </label>
+              <div className="flex items-center border rounded-lg p-3 gap-2">
+                <Mail className="text-indigo-600 w-5 h-5" />
                 <input
                   type="email"
+                  name="email"
                   required
                   placeholder="Enter your email"
-                  className="w-full border rounded-lg px-4 py-2 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 outline-none"
+                  className="w-full outline-none"
                 />
-              </motion.div>
+              </div>
 
               {/* Organization (optional) */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <label className="block text-sm font-medium text-gray-700">
-                  Organization
-                </label>
+              <div className="flex items-center border rounded-lg p-3 gap-2">
+                <Building2 className="text-indigo-600 w-5 h-5" />
                 <input
                   type="text"
+                  name="organization"
                   placeholder="Enter your organization"
-                  className="w-full border rounded-lg px-4 py-2 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 outline-none"
+                  className="w-full outline-none"
                 />
-              </motion.div>
+              </div>
 
               {/* City */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <label className="block text-sm font-medium text-gray-700">
-                  City *
-                </label>
+              <div className="flex items-center border rounded-lg p-3 gap-2">
+                <Home className="text-indigo-600 w-5 h-5" />
                 <input
                   type="text"
+                  name="city"
                   required
                   placeholder="Enter your city"
-                  className="w-full border rounded-lg px-4 py-2 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 outline-none"
+                  className="w-full outline-none"
                 />
-              </motion.div>
+              </div>
 
-              {/* Inquiry */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 }}
-                viewport={{ once: true }}
-              >
-                <label className="block text-sm font-medium text-gray-700">
-                  Inquiry
-                </label>
+              {/* Inquiry (optional) */}
+              <div className="flex items-start border rounded-lg p-3 gap-2">
+                <MessageSquare className="text-indigo-600 w-5 h-5 mt-1" />
                 <textarea
+                  name="inquiry"
                   placeholder="Enter your inquiry"
                   rows="4"
-                  className="w-full border rounded-lg px-4 py-2 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 outline-none"
+                  className="w-full outline-none"
                 ></textarea>
-              </motion.div>
+              </div>
 
               {/* Submit */}
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.2 }}
+                transition={{ delay: 0.2 }}
                 viewport={{ once: true }}
                 type="submit"
-                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition text-sm sm:text-base"
+                disabled={loading}
+                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition text-sm sm:text-base"
               >
-                Send
+                {loading ? "Sending..." : "Send Message"}
               </motion.button>
+
+              {status && (
+                <p className="text-center mt-2 text-sm font-medium">{status}</p>
+              )}
             </form>
           </motion.div>
         </div>
